@@ -1,0 +1,867 @@
+/* ==========================================
+   LUCIAN INDUSTRIES - Dark Theme
+   Matching lucianrandolph.com aesthetic
+   ========================================== */
+
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #111111;
+    --bg-card: #161616;
+    --gold: #c9a227;
+    --gold-light: #d4b84a;
+    --gold-dim: #8a7119;
+    --text-primary: #e8e8e8;
+    --text-secondary: #a0a0a0;
+    --text-dim: #666666;
+    --border: #2a2a2a;
+    --border-light: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.15em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Hero */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections */
+.section {
+    padding: 6rem 2rem;
+}
+
+.section-dark {
+    background: var(--bg-secondary);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.section-intro {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+}
+
+/* Ventures Grid */
+.ventures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.venture-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.venture-card:hover {
+    border-color: var(--gold-dim);
+    transform: translateY(-2px);
+}
+
+.venture-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.venture-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.venture-link {
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.venture-card.featured {
+    border-color: var(--gold-dim);
+}
+
+.venture-status {
+    color: var(--gold-dim);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Technology Cards */
+.tech-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.tech-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tech-header h3 {
+    font-size: 1.4rem;
+    color: var(--gold);
+}
+
+.tech-status {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.tech-content {
+    padding: 2rem;
+}
+
+.tech-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.tech-applications h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.application {
+    padding: 1.25rem;
+    background: rgba(201, 162, 39, 0.03);
+    border-left: 2px solid var(--gold-dim);
+}
+
+.application strong {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.application p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.tech-note {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-style: italic;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+/* Speaking Grid */
+.speaking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.speaking-topic {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.speaking-topic h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.speaking-topic p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.credentials {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.credentials h4 {
+    color: var(--gold);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.credentials ul {
+    list-style: none;
+}
+
+.credentials li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+    border-left: 1px solid var(--border);
+    margin-left: 0.5rem;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.contact-item h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.contact-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--gold-light);
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.9rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.15em;
+}
+
+.footer-text {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+.footer-legal {
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/* ── NEW SECTIONS ─────────────────────────────────────────────── */
+
+/* Hero additions */
+.hero-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2.5rem auto;
+    flex-wrap: wrap;
+}
+
+.stat { text-align: center; }
+
+.stat-number {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border-light);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: #000;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover { background: var(--gold-light); }
+
+.btn-secondary {
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold-dim);
+    color: var(--gold);
+}
+
+/* Foundation */
+.foundation-block {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.foundation-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+}
+
+.foundation-block h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.foundation-text {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+}
+
+.foundation-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.foundation-link:hover { color: var(--gold-light); }
+
+/* Section header */
+.section-header {
+    margin-bottom: 3rem;
+    max-width: 700px;
+}
+
+.section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+/* Portfolio grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.portfolio-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    transition: border-color 0.3s ease;
+}
+
+.portfolio-card:hover { border-color: var(--gold-dim); }
+
+.portfolio-card.flagship {
+    border-color: rgba(201,162,39,0.3);
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(201,162,39,0.03) 100%);
+}
+
+.card-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-card h3 {
+    font-size: 1.35rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.card-product {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.portfolio-card p {
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+}
+
+.card-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.card-stat { text-align: center; flex: 1; min-width: 60px; }
+
+.cstat-val {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.cstat-label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.2rem;
+}
+
+.card-note {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    font-style: italic;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    line-height: 1.6;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover { color: var(--gold-light); }
+
+/* Ventures row */
+.ventures-row {
+    display: flex;
+    gap: 0;
+    margin-top: 2rem;
+}
+
+.venture-item {
+    flex: 1;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s ease;
+}
+
+.venture-item:hover { background: rgba(201,162,39,0.03); }
+
+.venture-item h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.venture-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.venture-item span {
+    color: var(--gold);
+    font-size: 0.82rem;
+}
+
+.venture-divider {
+    width: 1px;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+/* Credentials */
+.cred-block { max-width: 900px; }
+
+.cred-block h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.cred-intro {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+}
+
+.cred-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.cred-item {
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--border);
+    margin: -1px 0 0 -1px;
+}
+
+.cred-item strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.cred-item span {
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+/* Network grid */
+.network-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
+.network-card {
+    background: var(--bg-secondary);
+    padding: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.network-card:hover { background: rgba(201,162,39,0.04); }
+
+.network-card.self { opacity: 0.5; cursor: default; }
+.network-card.self:hover { background: var(--bg-secondary); }
+
+.network-domain {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+}
+
+.network-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Contact */
+.contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-card:hover { border-color: var(--gold-dim); }
+
+.contact-card.primary { border-color: rgba(201,162,39,0.3); }
+
+.contact-card h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+}
+
+/* Footer updates */
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover { color: var(--gold-dim); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 6rem 1.5rem 3rem;
+    }
+
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .tech-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cred-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .network-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ventures-row {
+        flex-direction: column;
+    }
+
+    .venture-divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .hero-stats {
+        gap: 1.25rem;
+    }
+
+    .stat-divider { display: none; }
+}

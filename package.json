@@ -1,0 +1,9 @@
+{
+  "name": "lucianindustries",
+  "version": "1.0.0",
+  "description": "Lucian Industries corporate website",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  }
+}
