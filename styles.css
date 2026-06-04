@@ -813,6 +813,73 @@ h1, h2, h3, h4 {
 
 .footer-links a:hover { color: var(--gold-dim); }
 
+/* Direct contact section */
+.contact-direct {
+    max-width: 700px;
+}
+
+.contact-direct h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.contact-philosophy {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    margin-bottom: 3rem;
+    max-width: 580px;
+}
+
+.contact-email-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 2rem 2.5rem;
+    border: 1px solid rgba(201,162,39,0.3);
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(201,162,39,0.03) 100%);
+    display: inline-flex;
+}
+
+.contact-email-address {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.contact-email-address:hover { color: var(--gold-light); }
+
+.contact-email-name {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.contact-secondary {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-sep { color: var(--border-light); }
+
+.contact-speaking-link {
+    color: var(--gold-dim);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-speaking-link:hover { color: var(--gold); }
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
